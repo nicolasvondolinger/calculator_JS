@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calc.js</title>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="calculator.png">
+</head>
+<body class="isLight">
+  <div class="container">
+  <div class="calc-body">
+    <div class="header">
+      <div class="header title">
+        <h1 class="title">Calc.js</h1>
+      </div>
+      <div class="header switchTheme">
+        <button class="switchThemeButton" onclick="switchTheme()">Dark/Light</button>
+      </div>
+    </div>
+    <div class="calc-screen">
+      <div class="calc-typed">
+        <input class='ghost-input' id="input_number" type="text" >
+      </div>
+    </div>
+      <div class="calc-button-row">
+        <button class="button c" onclick="clearVisor()">C</button>
+        <button class="button l" onclick="showOnVisor('(')">(</button>
+        <button class="button l" onclick="showOnVisor(')')">)</button>
+        <button class="button l" onclick="showOnVisor('/')">/</button>
+      </div>
+      <div class="calc-button-row">
+        <button class="button" onclick="showOnVisor(7)">7</button>
+        <button class="button" onclick="showOnVisor(8)">8</button>
+        <button class="button" onclick="showOnVisor(9)">9</button>
+        <button class="button l" onclick="showOnVisor('*')">*</button>
+      </div>
+      <div class="calc-button-row">
+        <button class="button" onclick="showOnVisor(4)">4</button>
+        <button class="button" onclick="showOnVisor(5)">5</button>
+        <button class="button" onclick="showOnVisor(6)">6</button>
+        <button class="button l" onclick="showOnVisor('-')">-</button>
+      </div>
+      <div class="calc-button-row">
+        <button class="button" onclick="showOnVisor(1)">1</button>
+        <button class="button" onclick="showOnVisor(2)">2</button>
+        <button class="button" onclick="showOnVisor(3)">3</button>
+        <button class="button l" onclick="showOnVisor('+')">+</button>
+      </div>
+      <div class="calc-button-row">
+        <button class="button" onclick="showOnVisor(0)">0</button>
+        <button class="button" onclick="showOnVisor('.')">.</button>
+        <button class="button" onclick="showOnVisor('%')">%</button>
+        <button class="button i" onclick="finish()">=</button>
+      </div>
+      <div class="calc-footer">
+        <button onclick="copyNumber()" class="button l copy" id="copy-button"><img src="copy.png" alt="Copy Number" class="img"></button>
+        <input id="result" type="text" class="ghost-output" disabled>
+      </div>
+  </div>
+  </div>
+
+  <div class="footer">
+    <p class="">Made by <br> <a href="https://beacons.ai/nicolasvondolinger" target="_blank" rel="noopener noreferrer">Nicolas von Dolinger</a></p>
+  </div>
+</body>
+</html>
